@@ -7,16 +7,20 @@ const user = {
 
 function db(usr) {
 	for (let key in usr) {
+		
+		 if (usr.hasOwnProperty(key)) {
 
-		console.log( `${key}: ${usr[key]}`); 
+			console.log(`${key}: ${usr[key]}`); 
+		};   
 	 
 	};
+	
 };
 db(user);
 
 //Задание 2.
 
-function check(str, obj) {
+ function check(str, obj) {
 	
 	console.log(str in obj);
 	
@@ -33,7 +37,7 @@ function createObj(obj) {
 
   let object = createObj('obj')
   console.log((object));
-
+ 
 
 
 
